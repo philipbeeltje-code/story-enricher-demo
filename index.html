@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Story Enricher | Incentro</title>
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" />
+    <script>
+      // Before the first paint, so a dark theme doesn't flash light; web/src/theme.ts takes over after.
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem('theme'); } catch (e) {}
+        // Without a choice: the system's, or light in the demo (vite --mode demo fills in demo).
+        if (t !== 'light' && t !== 'dark' && t !== 'system') t = 'demo' === 'demo' ? 'light' : 'system';
+        if (t === 'system') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = t;
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-BGoSYFt3.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Cm1AUmDi.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
